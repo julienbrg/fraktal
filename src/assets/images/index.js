@@ -1,3 +1,3 @@
 import Ethereum from "./ethereum.svg";
-
-export { Ethereum };
+import SampleImage from "./fraktal-by-paul-bourke.jpg";
+export { Ethereum, SampleImage };
