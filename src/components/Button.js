@@ -29,7 +29,7 @@ const ButtonText = styled.span`
 
 export default props => (
   <Section>
-    <ActionButton size="lg">
+    <ActionButton onClick={props.onClick} size="lg">
       <ButtonText>Run</ButtonText>
     </ActionButton>
   </Section>
