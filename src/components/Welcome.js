@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import styled from "styled-components";
@@ -45,26 +46,26 @@ export default props => (
       <Header>Welcome to Fraktal app!</Header>
       <Paragraph>
         For the price of $23, get a beatiful drawing based on{" "}
-        <a href="#" target="_blank" rel="noopener">
+        <a href="#" target="_blank" rel="no-referrer">
           Cliff Pickover’s
         </a>{" "}
         work: <Bold>gorgeous custom fractal rendenrings are awesome!</Bold> The
         drawing app is executed in a fully distributed way and the result is
         delivered to a decentralized storage system:.{" "}
-        <a href="http://iex.ec/" target="_blank" rel="noopener">
+        <a href="http://iex.ec/" target="_blank" rel="no-referrer">
           iExec
         </a>{" "}
         uses the{" "}
-        <a href="https://ethereum.org" target="_blank" rel="noopener">
+        <a href="https://ethereum.org" target="_blank" rel="no-referrer">
           Ethereum
         </a>{" "}
-        blockchain to process payment and run its consensus algorithm called
-        <a href="#" target="_blank" rel="noopener">
+        blockchain to process payment and run its consensus algorithm called{" "}
+        <a href="#" target="_blank" rel="no-referrer">
           PoCo
         </a>
         : when you pay, you’re guaranteed to obtain your HD file at the
         indicated{" "}
-        <a href="https://ipfs.io" target="_blank" rel="noopener">
+        <a href="https://ipfs.io" target="_blank" rel="no-referrer">
           IPFS
         </a>{" "}
         address.
