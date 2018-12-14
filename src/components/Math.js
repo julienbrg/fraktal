@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 const Calculation = styled.p``;
 
-const Text = styled.text`
+const Text = styled.span`
   font-size: 24px;
 `;
 
