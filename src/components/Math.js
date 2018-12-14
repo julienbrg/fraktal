@@ -7,6 +7,7 @@ const Section = styled.section`
   background-color: #a4c2f4;
   padding: 0 90px;
   max-width: 500px;
+  margin-top: 60px;
 `;
 
 const Container = styled.div`
