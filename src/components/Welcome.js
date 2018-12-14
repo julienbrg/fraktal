@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import styled from "styled-components";
 
@@ -5,6 +6,19 @@ const Section = styled.section`
   border-style: dashed;
   border-width: 1px
   border-radius: 6px;
+  a {
+    color: #000;
+    text-decoration: underline;
+    &:focus: {
+      color: #000 !important;
+    }
+    &:hover: {
+      color: #000 !important;
+    }
+    &:active: {
+      color: #000 !important;
+    }
+  }
 `;
 
 const Container = styled.div`
@@ -30,13 +44,30 @@ export default props => (
     <Container>
       <Header>Welcome to Fraktal app!</Header>
       <Paragraph>
-        For the price of $23, get a beatiful drawing based on Cliff Pickover’s
+        For the price of $23, get a beatiful drawing based on{" "}
+        <a href="#" target="_blank" rel="noopener">
+          Cliff Pickover’s
+        </a>{" "}
         work: <Bold>gorgeous custom fractal rendenrings are awesome!</Bold> The
         drawing app is executed in a fully distributed way and the result is
-        delivered to a decentralized storage system:. iExec uses the Ethereum
+        delivered to a decentralized storage system:.{" "}
+        <a href="http://iex.ec/" target="_blank" rel="noopener">
+          iExec
+        </a>{" "}
+        uses the{" "}
+        <a href="https://ethereum.org" target="_blank" rel="noopener">
+          Ethereum
+        </a>{" "}
         blockchain to process payment and run its consensus algorithm called
-        PoCo: when you pay, you’re guaranteed to obtain your HD file at the
-        indicated IPFS address.
+        <a href="#" target="_blank" rel="noopener">
+          PoCo
+        </a>
+        : when you pay, you’re guaranteed to obtain your HD file at the
+        indicated{" "}
+        <a href="https://ipfs.io" target="_blank" rel="noopener">
+          IPFS
+        </a>{" "}
+        address.
       </Paragraph>
       <Paragraph>
         <Bold>
