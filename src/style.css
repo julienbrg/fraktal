@@ -1,3 +1,22 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+.x-slider {
+    width: 100%;
+    cursor: 'pointer';
+}
+
+.handle {
+  cursor: pointer;
+}
+
+.u-slider-x .handle::after, .u-slider-y .handle::after {
+   content: "\f42e";
+   font-family: "Font Awesome 5 Free";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+   background-color: transparent;
+   border: none;
+}
