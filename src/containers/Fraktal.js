@@ -5,7 +5,7 @@ import Title from "../components/Title";
 import WelcomeBanner from "../components/Welcome";
 import MathUI from "../components/Math";
 import RunButton from "../components/Button";
-// import ProgressUI from "../components/Progress";
+import ProgressUI from "../components/Progress";
 import Spinner from "../components/Spinner";
 import Output from "../components/Output";
 import { SampleImage } from "../assets/images/index";
@@ -64,7 +64,7 @@ class Fraktal extends Component {
             {!this.state.data.hasOwnProperty("image") && (
               <div>
                 <MathUI />
-                {/* <ProgressUI /> */}
+                <ProgressUI />
                 <RunButton onClick={e => this.renderOutput(e)}>Run</RunButton>
               </div>
             )}
