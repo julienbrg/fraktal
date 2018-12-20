@@ -31,10 +31,9 @@ class Fraktal extends Component {
     });
     setTimeout(this.updateState, 3000, SampleImage, "Sample Image");
     const { values } = this.state;
-    const url = `https://market.iex.ec/?dappAddress=${DAPP_ADDRESS}&
-    workParams={"cmdline":"Rscript /iexec/CliffordAttractors.R ${values[0]} ${
-      values[1]
-    } ${values[2]} ${
+    const url = `https://market.iex.ec/?dappAddress=${DAPP_ADDRESS}&workParams={"cmdline":"Rscript /iexec/CliffordAttractors.R ${
+      values[0]
+    } ${values[1]} ${values[2]} ${
       values[3]
     }","dirinuri":"https://raw.githubusercontent.com/iExecBlockchainComputing/iexec-dapps-registry/master/iExecBlockchainComputing/R-Clifford-Attractors/CliffordAttractors.R"}`;
     window.location = url;
