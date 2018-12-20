@@ -20,8 +20,8 @@ export default class ProgressUI extends React.Component {
       cornersWidth: 4,
       size: 300,
       fillColor: '#000000',
-      trackColor: '#ff0000',
-      progressColor: '#00ff00'
+      trackColor: '#9900ff',
+      progressColor: '#9900ff'
     };
   }
 
