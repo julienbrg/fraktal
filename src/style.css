@@ -10,13 +10,27 @@ body {
   cursor: pointer;
 }
 
+.u-slider {
+  background-color: #9900ff;
+}
+
+.u-slider .value {
+  background-color: #9900ff;
+}
+.u-slider-x {
+  height: 4px;
+}
+
+.u-slider-x .handle::after {
+  top: -18px;
+}
 .u-slider-x .handle::after, .u-slider-y .handle::after {
-   content: "\f42e";
-   font-family: "Font Awesome 5 Free";
-   display: inline-block;
-   padding-right: 3px;
-   vertical-align: middle;
-   font-weight: 900;
-   background-color: transparent;
-   border: none;
+  content: url('./assets/images/ethereum.svg');
+  display: inline-block;
+  padding-right: 3px;
+  width: 40px;
+  vertical-align: middle;
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
 }
