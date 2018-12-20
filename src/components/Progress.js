@@ -1,55 +1,48 @@
 import React from "react";
-import styled from "styled-components";
-import { Progress } from "reactstrap";
-import Slider from 'react-input-slider';
-import 'react-input-slider/dist/input-slider.css';
+import "rc-slider/assets/index.css";
+import "rc-tooltip/assets/bootstrap.css";
+import Tooltip from "rc-tooltip";
+import Slider from "rc-slider";
 
-const ProgressBar = styled.section`
-  width: 100%;
-  margin-top: 20px;
-`;
+const createSliderWithTooltip = Slider.createSliderWithTooltip;
+const Range = createSliderWithTooltip(Slider.Range);
+const Handle = Slider.Handle;
 
-export default class ProgressUI extends React.Component {
+const wrapperStyle = {
+  width: 400,
+  margin: 50
+};
+
+export default class Progress extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDegree: 60,
-      progress: 50,
-      progressWidth: 20,
-      trackWidth: 40,
-      cornersWidth: 4,
-      size: 300,
-      fillColor: '#000000',
-      trackColor: '#9900ff',
-      progressColor: '#9900ff'
+      value: [-2, -1, 0, 1]
     };
   }
 
-  handleSliderChange = (name, position) => {
-    let s = {};
-    s[name] = position.x;
-    this.setState(s);
+  componentDidMount() {
+    this.props.setValues(this.state.value);
   }
 
-  renderSlider = (name, min, max) => {
-    return (
-      <div>
-        <Slider
-          className="x-slider"
-          x={this.state[name]}
-          xmin={min}
-          xmax={max}
-          onChange={val => this.handleSliderChange(name, val)}
-          />
-      </div>
-    );
-  }
+  handleChange = value => {
+    this.setState({
+      value
+    });
+    this.props.setValues(this.state.value);
+  };
 
   render() {
     return (
-      <ProgressBar>
-        {this.renderSlider('progress', 0, 360)}
-      </ProgressBar>
+      <div style={wrapperStyle}>
+        <Range
+          value={this.state.value}
+          step={0.0000001}
+          min={-2}
+          max={2}
+          onChange={this.handleChange}
+        />
+      </div>
     );
   }
 }
