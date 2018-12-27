@@ -1,17 +1,21 @@
 import React from "react";
 import "rc-slider/assets/index.css";
 import "rc-tooltip/assets/bootstrap.css";
-import Tooltip from "rc-tooltip";
 import Slider from "rc-slider";
+import styled from "styled-components";
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
-const Handle = Slider.Handle;
 
 const wrapperStyle = {
   width: 400,
   margin: 50
 };
+
+const InfoBox = styled.p`
+  font-weight: 600;
+  margin: 30px;
+`;
 
 export default class Progress extends React.Component {
   constructor(props) {
@@ -42,6 +46,9 @@ export default class Progress extends React.Component {
           max={2}
           onChange={this.handleChange}
         />
+        <InfoBox>
+          Drag the slider bar above to set the values of a, b, c and d.
+        </InfoBox>
       </div>
     );
   }
